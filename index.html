@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宠研の家 清洁用品 | 专业宠物清洁护理 - 温和配方 安全有效</title>
+    <meta name="description" content="宠研の家 专注宠物清洁护理用品，提供沐浴露、洁牙粉、除臭剂、护理湿巾等全系列清洁产品。温和配方，安全有效，让宠物享受SPA级护理体验。">
+    <meta name="keywords" content="宠研の家 ,宠物清洁用品,宠物沐浴露,宠物洁牙粉,宠物除臭剂,宠物护理湿巾,宠物清洁护理">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://chongyanjia.com/">
+    <meta name="author" content="宠研の家 ">
+    <meta name="theme-color" content="#7CC47C">
+    <link rel="icon" type="image/jpeg" href="statics/images/logo.jpg">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="宠研の家  清洁用品 | 专业宠物清洁护理">
+    <meta property="og:description" content="宠研の家 专注宠物清洁护理用品，温和配方，安全有效，让宠物享受SPA级护理体验。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chongyanjia.com/">
+    <meta property="og:site_name" content="宠研の家 ">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="宠研の家  清洁用品 | 专业宠物清洁护理">
+    <meta name="twitter:description" content="宠研の家 专注宠物清洁护理用品，温和配方，安全有效，让宠物享受SPA级护理体验。">
+
+    <!-- 引入本地字体 -->
+    <link href="statics/css/fonts.css" rel="stylesheet">
+    <!-- 引入本地 Tailwind CSS Play CDN -->
+    <script src="statics/js/tailwind.js"></script>
+    <!-- 自定义品牌配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#003AC5',   // 克莱因蓝 主色
+                            orange: '#FF7A00', // 活力橙 强调色
+                            cream: '#F8F5F0',  // 奶油白 辅助色
+                            green: '#53aa34',  // 柔和绿 辅助色 #7CC47C
+                            gray: '#E5E5E5',   // 浅灰 辅助色
+                            dark: '#1A1A1A'    // 深灰 文字
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow-sm {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 40px rgba(83, 170, 52, 0.18);
+            }
+            .animate-on-scroll {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            }
+            .animate-on-scroll.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .btn-press:active {
+                transform: scale(0.97);
+            }
+            .floating {
+                animation: floating 3s ease-in-out infinite;
+            }
+            @keyframes floating {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-15px); }
+            }
+            .animate-pulse-slow {
+                animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            }
+            @keyframes pulse {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0.5; }
+            }
+        }
+    </style>
+    <style>
+        :root {
+            --brand-blue: #003AC5;
+            --brand-green: #53aa34;
+            --brand-orange: #FF7A00;
+            --grad-brand: linear-gradient(135deg, #003AC5 0%, #2f7ae0 55%, #53aa34 130%);
+            --grad-soft: linear-gradient(180deg, #ffffff 0%, #f6f9f4 100%);
+            --shadow-soft: 0 10px 30px -12px rgba(16, 34, 66, 0.14);
+            --shadow-brand: 0 22px 48px -20px rgba(83, 170, 52, 0.34);
+            --ring-brand: 0 0 0 4px rgba(83, 170, 52, 0.14);
+        }
+        html { scroll-behavior: smooth; }
+        body { -webkit-font-smoothing: antialiased; }
+
+        /* 统一区块内边距节奏 */
+        .section-pad { padding-top: 6rem; padding-bottom: 6rem; }
+        @media (max-width: 640px) { .section-pad { padding-top: 4rem; padding-bottom: 4rem; } }
+
+        /* 区块 eyebrow 小标 */
+        .eyebrow {
+            display: inline-flex; align-items: center; gap: .5rem;
+            font-size: .8rem; font-weight: 700; letter-spacing: .16em;
+            text-transform: uppercase; color: var(--brand-green);
+        }
+        .eyebrow::before { content: ""; width: 26px; height: 2px; border-radius: 2px; background: var(--grad-brand); }
+        .eyebrow.center::after { content: ""; width: 26px; height: 2px; border-radius: 2px; background: var(--grad-brand); }
+
+        /* 标题下装饰渐变条 */
+        .title-accent {
+            width: 64px; height: 5px; border-radius: 9999px;
+            background: var(--grad-brand); margin: 1.1rem auto 0;
+            box-shadow: var(--ring-brand);
+        }
+        .title-accent.left { margin-left: 0; margin-right: auto; }
+
+        /* 柔和阴影与品牌渐变按钮 */
+        .shadow-soft { box-shadow: var(--shadow-soft); }
+        .grad-brand { background: var(--grad-brand); }
+        .btn-brand {
+            background: var(--grad-brand); box-shadow: var(--shadow-brand);
+            transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+        }
+        .btn-brand:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 26px 54px -18px rgba(83,170,52,.44); }
+
+        /* 玻璃拟态 */
+        .glass { background: rgba(255,255,255,.72); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+
+        /* 点阵纹理背景 */
+        .dot-grid {
+            background-image: radial-gradient(rgba(0,58,197,.06) 1px, transparent 1px);
+            background-size: 22px 22px;
+        }
+
+        /* 优势图标瓦片 */
+        .icon-tile {
+            width: 64px; height: 64px; border-radius: 18px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; color: #fff; background: var(--grad-brand);
+            box-shadow: var(--shadow-brand);
+        }
+        .feature-card { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease, border-color .35s ease; }
+        .feature-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-brand); border-color: rgba(83,170,52,.35); }
+
+        /* 产品图片 hover 缩放 */
+        .product-media img { transition: transform .6s cubic-bezier(.22,1,.36,1); }
+        .card-hover:hover .product-media img { transform: scale(1.06); }
+    </style>
+</head>
+<body class="font-sans bg-white text-brand-dark antialiased overflow-x-hidden">
+    <!-- 顶部导航栏 -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 grad-brand shadow-lg">
+        <!-- 第一行：宠研家居中 -->
+        <div class="grad-brand py-3">
+            <div class="container mx-auto px-6 text-center">
+                <a href="index.html" class="inline-flex items-center gap-2.5">
+                    <img src="statics/images/logo.jpg" alt="宠研の家 logo" class="w-9 h-9 rounded-lg object-cover ring-2 ring-white/80 shadow-md">
+                    <span class="text-xl font-bold text-white nav-logo-text tracking-wide drop-shadow-md">宠研之家</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 第二行：品牌导航 -->
+        <div class="bg-white py-3 border-b border-gray-200">
+            <div class="container mx-auto px-6 flex items-center justify-between">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2.5">
+                    <img src="statics/images/logo.jpg" alt="宠研の家 logo" class="w-10 h-10 rounded-lg object-cover shadow-sm ring-1 ring-gray-200">
+                    <div class="flex flex-col">
+                        <span class="text-lg font-bold text-brand-dark nav-logo-text tracking-wide">宠研の家 </span>
+                        <span class="text-xs text-gray-500">清洁用品</span>
+                    </div>
+                </a>
+
+                <!-- 桌面端导航 -->
+                <div class="hidden md:flex items-center gap-8">
+                     <a href="index.html" class="text-brand-dark font-medium hover:text-brand-blue transition-colors relative group">
+                        首页
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all group-hover:w-full"></span>
+                    </a>
+                    <!-- <a href="#features" class="text-brand-dark font-medium hover:text-brand-blue transition-colors relative group">
+                        核心优势
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all group-hover:w-full"></span>
+                    </a> -->
+                    <a href="#products" class="text-brand-dark font-medium hover:text-brand-blue transition-colors relative group">
+                        品牌产品
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#ingredients" class="text-brand-dark font-medium hover:text-brand-blue transition-colors relative group">
+                        天然成分
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#testimonials" class="text-brand-dark font-medium hover:text-brand-blue transition-colors relative group">
+                        用户评价
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#purchase" class="text-brand-dark font-medium hover:text-brand-blue transition-colors relative group">
+                        购买渠道
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#stores" class="text-brand-dark font-medium hover:text-brand-blue transition-colors relative group">
+                        线下门店
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
+
+
+                <!-- 移动端菜单按钮 -->
+                <button class="md:hidden text-brand-dark" id="menuBtn">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- 移动端菜单 -->
+            <div id="mobileMenu" class="hidden md:hidden bg-white px-6 pb-6 border-t border-gray-200">
+                <div class="flex flex-col gap-4">
+                    <!-- <a href="#features" class="text-brand-dark font-medium py-2 border-b border-gray-200">核心优势</a> -->
+                    <a href="#products" class="text-brand-dark font-medium py-2 border-b border-gray-200">品牌产品</a>
+                    <a href="#ingredients" class="text-brand-dark font-medium py-2 border-b border-gray-200">天然成分</a>
+                    <a href="#testimonials" class="text-brand-dark font-medium py-2 border-b border-gray-200">用户评价</a>
+                    <a href="#purchase" class="text-brand-dark font-medium py-2 border-b border-gray-200">购买渠道</a>
+                    <a href="#stores" class="text-brand-dark font-medium py-2 border-b border-gray-200">线下门店</a>
+                    <a href="petlabmaster.html" class="text-gray-600 font-medium py-2">PetLabMaster 宠研大师</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面主内容 -->
+    <main id="main-content">
+        <!-- SEO隐藏H1 -->
+        <h1 class="sr-only">宠研の家  - 专业宠物清洁护理用品品牌，温和配方，安全有效</h1>
+
+        <!-- 首屏 Banner（单图） -->
+        <section class="relative min-h-screen overflow-hidden pt-32" aria-label="首页展示">
+            <div class="banner-slide active relative w-full min-h-screen">
+                <div class="absolute inset-0 overflow-hidden">
+                    <img src="statics/images/cyj_banner1.jpg" alt="宠研家清洁护理产品 天然植萃配方" class="banner-img" loading="eager">
+                </div>
+            </div>
+
+            <!-- 向下滚动提示 -->
+            <a href="#features" id="scrollHint" class="hidden md:flex absolute bottom-16 left-1/2 -translate-x-1/2 z-30 flex-col items-center gap-1 text-white/85 hover:text-white transition-colors duration-500">
+                <span class="text-[10px] tracking-[0.4em] uppercase">Scroll</span>
+                <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7-7-7"/></svg>
+            </a>
+
+            <!-- 底部波浪装饰 -->
+            <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
+                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+                </svg>
+            </div>
+        </section>
+
+        <style>
+            .banner-slide { pointer-events: auto; }
+            .banner-img {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform-origin: center;
+                will-change: transform;
+                animation: ken-burns 18s ease-out infinite alternate;
+            }
+            @keyframes ken-burns {
+                0%   { transform: scale(1.02); }
+                100% { transform: scale(1.14); }
+            }
+        </style>
+
+        <!-- 核心优势 -->
+        <section id="features" class="section-pad bg-brand-cream/40 dot-grid" style="display: none;">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 animate-on-scroll">
+                    <span class="eyebrow center">核心优势</span>
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-brand-dark mt-3 mb-4 tracking-tight">为什么选择宠研家？</h2>
+                    <div class="title-accent"></div>
+                    <p class="text-gray-500 max-w-2xl mx-auto mt-6">从配方研发到成品出厂，每一步都精益求精</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="feature-card animate-on-scroll relative bg-white rounded-2xl p-7 shadow-soft border border-gray-100">
+                        <span class="absolute top-6 right-7 text-4xl font-extrabold text-brand-green/10 leading-none">01</span>
+                        <div class="icon-tile mb-5">🧪</div>
+                        <h3 class="text-lg font-bold text-brand-dark mb-2">科研级配方体系</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">联合动物医学专家与日化研发团队，每款配方均经过功效验证与安全评估</p>
+                    </div>
+
+                    <div class="feature-card animate-on-scroll relative bg-white rounded-2xl p-7 shadow-soft border border-gray-100" style="transition-delay: 0.1s;">
+                        <span class="absolute top-6 right-7 text-4xl font-extrabold text-brand-green/10 leading-none">02</span>
+                        <div class="icon-tile mb-5">🌱</div>
+                        <h3 class="text-lg font-bold text-brand-dark mb-2">天然植萃成分</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">核心成分源自天然植物提取，拒绝人工香精、色素及刺激性防腐剂</p>
+                    </div>
+
+                    <div class="feature-card animate-on-scroll relative bg-white rounded-2xl p-7 shadow-soft border border-gray-100" style="transition-delay: 0.2s;">
+                        <span class="absolute top-6 right-7 text-4xl font-extrabold text-brand-green/10 leading-none">03</span>
+                        <div class="icon-tile mb-5">🔬</div>
+                        <h3 class="text-lg font-bold text-brand-dark mb-2">严苛安全检测</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">所有产品通过SGS权威检测，重金属、微生物、皮肤刺激性等多维度检测</p>
+                    </div>
+
+                    <div class="feature-card animate-on-scroll relative bg-white rounded-2xl p-7 shadow-soft border border-gray-100" style="transition-delay: 0.3s;">
+                        <span class="absolute top-6 right-7 text-4xl font-extrabold text-brand-green/10 leading-none">04</span>
+                        <div class="icon-tile mb-5">🐾</div>
+                        <h3 class="text-lg font-bold text-brand-dark mb-2">宠物友好设计</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">从低敏配方到防误触包装，每一个细节都从宠物使用场景出发</p>
+                    </div>
+
+                    <div class="feature-card animate-on-scroll relative bg-white rounded-2xl p-7 shadow-soft border border-gray-100" style="transition-delay: 0.4s;">
+                        <span class="absolute top-6 right-7 text-4xl font-extrabold text-brand-green/10 leading-none">05</span>
+                        <div class="icon-tile mb-5">🧬</div>
+                        <h3 class="text-lg font-bold text-brand-dark mb-2">分龄分型护理</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">针对幼宠、成宠、老年宠及不同毛发类型，提供差异化护理方案</p>
+                    </div>
+
+                    <div class="feature-card animate-on-scroll relative bg-white rounded-2xl p-7 shadow-soft border border-gray-100" style="transition-delay: 0.5s;">
+                        <span class="absolute top-6 right-7 text-4xl font-extrabold text-brand-green/10 leading-none">06</span>
+                        <div class="icon-tile mb-5">♻️</div>
+                        <h3 class="text-lg font-bold text-brand-dark mb-2">绿色可持续</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">采用可降解包装与环保生产工艺，让爱护宠物与守护地球并行不悖</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 品牌理念 -->
+        <section id="philosophy" class="section-pad bg-gradient-to-br from-green-50 via-white to-brand-green/10" style="display: none;">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-on-scroll">
+                        <span class="eyebrow">品牌理念</span>
+                        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-brand-dark mt-4 mb-2 tracking-tight">以科研之心<br>守护每一份陪伴</h2>
+                        <div class="title-accent left"></div>
+                        <p class="text-gray-600 text-lg leading-relaxed mt-6 mb-4">我们相信，宠物值得和人类一样严谨的护理标准</p>
+                        <p class="text-gray-500 leading-relaxed mb-8">宠研家创立于对宠物清洁护理的深度思考——市面上的宠物清洁产品良莠不齐，许多产品含有刺激性化学成分，悄悄伤害着毛孩子的健康。我们联合兽医专家与日化研发团队，以「人用级安全标准」重新定义宠物清洁，让每一次清洁都安心无忧。</p>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white rounded-xl p-5 shadow-soft border border-gray-100 border-l-4 border-l-brand-green">
+                                <div class="text-3xl font-extrabold grad-brand bg-clip-text text-transparent mb-1">6+</div>
+                                <div class="text-gray-500 text-sm">年专注宠物清洁研发</div>
+                            </div>
+                            <div class="bg-white rounded-xl p-5 shadow-soft border border-gray-100 border-l-4 border-l-brand-blue">
+                                <div class="text-3xl font-extrabold grad-brand bg-clip-text text-transparent mb-1">50万+</div>
+                                <div class="text-gray-500 text-sm">宠物家庭信赖之选</div>
+                            </div>
+                            <div class="bg-white rounded-xl p-5 shadow-soft border border-gray-100 border-l-4 border-l-brand-orange">
+                                <div class="text-3xl font-extrabold grad-brand bg-clip-text text-transparent mb-1">0</div>
+                                <div class="text-gray-500 text-sm">刺激性化学添加</div>
+                            </div>
+                            <div class="bg-white rounded-xl p-5 shadow-soft border border-gray-100 border-l-4 border-l-brand-green">
+                                <div class="text-3xl font-extrabold grad-brand bg-clip-text text-transparent mb-1">98%</div>
+                                <div class="text-gray-500 text-sm">天然植萃成分占比</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="animate-on-scroll flex justify-center" style="transition-delay: 0.2s;">
+                        <div class="relative grad-brand rounded-3xl p-8 text-white shadow-[var(--shadow-brand)] w-full max-w-sm overflow-hidden">
+                            <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/10 blur-2xl"></div>
+                            <div class="absolute -bottom-12 -left-8 w-44 h-44 rounded-full bg-white/10 blur-2xl"></div>
+                            <div class="relative flex items-center justify-center text-[110px] leading-none py-4">🐕</div>
+                            <p class="relative text-center text-white/95 text-lg font-bold tracking-wide">人用级安全标准</p>
+                            <div class="relative flex flex-wrap justify-center gap-2 mt-5">
+                                <span class="glass text-brand-dark text-xs font-semibold px-3 py-1.5 rounded-full">🧪 SGS 权威检测</span>
+                                <span class="glass text-brand-dark text-xs font-semibold px-3 py-1.5 rounded-full">🌿 0 化学添加</span>
+                                <span class="glass text-brand-dark text-xs font-semibold px-3 py-1.5 rounded-full">🐾 敏感肌可用</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 天然成分 -->
+        <section id="ingredients" class="section-pad bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <span class="eyebrow center">天然成分</span>
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-brand-dark mt-3 mb-4 tracking-tight">源自大自然的温柔力量</h2>
+                    <div class="title-accent"></div>
+                    <p class="text-gray-500 max-w-xl mx-auto mt-6">精选全球优质天然原料，以植物智慧守护爱宠健康</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+                    <div class="feature-card bg-gradient-to-br from-green-50 to-white rounded-2xl p-5 text-center animate-on-scroll border border-green-100 shadow-soft">
+                        <div class="text-4xl mb-3">🌾</div>
+                        <h4 class="font-bold text-brand-dark mb-1 text-sm">燕麦精华</h4>
+                        <p class="text-xs text-gray-500">舒缓抗敏</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-green-50 to-white rounded-2xl p-5 text-center animate-on-scroll border border-green-100 shadow-soft" style="transition-delay: 0.1s;">
+                        <div class="text-4xl mb-3">🍵</div>
+                        <h4 class="font-bold text-brand-dark mb-1 text-sm">绿茶提取物</h4>
+                        <p class="text-xs text-gray-500">天然抑菌</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-green-50 to-white rounded-2xl p-5 text-center animate-on-scroll border border-green-100 shadow-soft" style="transition-delay: 0.2s;">
+                        <div class="text-4xl mb-3">🫒</div>
+                        <h4 class="font-bold text-brand-dark mb-1 text-sm">乳木果油</h4>
+                        <p class="text-xs text-gray-500">深层滋润</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-green-50 to-white rounded-2xl p-5 text-center animate-on-scroll border border-green-100 shadow-soft" style="transition-delay: 0.3s;">
+                        <div class="text-4xl mb-3">🍊</div>
+                        <h4 class="font-bold text-brand-dark mb-1 text-sm">柑橘精油</h4>
+                        <p class="text-xs text-gray-500">天然除臭</p>
+                    </div>
+                    <div class="feature-card bg-gradient-to-br from-green-50 to-white rounded-2xl p-5 text-center animate-on-scroll border border-green-100 shadow-soft" style="transition-delay: 0.4s;">
+                        <div class="text-4xl mb-3">🌿</div>
+                        <h4 class="font-bold text-brand-dark mb-1 text-sm">芦荟提取物</h4>
+                        <p class="text-xs text-gray-500">保湿舒缓</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品中心 -->
+        <section id="products" class="section-pad bg-brand-cream/40 dot-grid">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <span class="eyebrow center">品牌产品</span>
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-brand-dark mt-3 mb-4 tracking-tight">全系列清洁护理产品</h2>
+                    <div class="title-accent"></div>
+                    <p class="text-gray-500 max-w-2xl mx-auto mt-6">消毒液 · 抑菌喷剂 · 除臭喷雾 · 驱虫除螨，一站式覆盖宠居全场景清洁方案</p>
+                </div>
+
+                <!-- 场景应用横幅 -->
+                <div class="relative rounded-3xl overflow-hidden mb-10 shadow-soft animate-on-scroll aspect-[21/9] bg-gray-100">
+                    <img src="statics/images/good/千倍消毒液_家居场景应用.png" alt="千倍除臭消毒液 家居场景应用" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent"></div>
+                    <div class="absolute inset-y-0 left-0 flex flex-col justify-center p-6 md:p-10 text-white max-w-lg">
+                        <span class="text-xs uppercase tracking-widest text-brand-green mb-2 font-bold">场景应用</span>
+                        <h3 class="text-xl md:text-3xl font-extrabold mb-2 leading-tight tracking-tight">从猫砂盆到全屋<br>一瓶搞定宠物异味</h3>
+                        <p class="text-white/90 text-sm md:text-base">千倍稀释 · 低残留，人宠共用空间安心使用</p>
+                    </div>
+                </div>
+
+                <!-- 产品列表 -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- 产品 1: 千倍除臭消毒液 · 猫款套装 -->
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100">
+                        <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
+                            <img src="statics/images/good/千倍消毒液_1桶加1喷雾_猫款.jpg" alt="千倍除臭消毒液 猫款套装" class="w-full h-full object-cover" loading="lazy">
+                            <div class="absolute top-3 right-3 bg-brand-green text-white text-xs px-3 py-1 rounded-full font-medium">热销</div>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-brand-dark mb-1">千倍除臭消毒液 · 猫款套装</h4>
+                            <p class="text-gray-500 text-sm mb-3">1桶浓缩 + 1喷雾，猫砂盆 · 家居除味杀菌</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">千倍稀释</span>
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">猫用专用</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-lg font-bold text-brand-green">¥128</span>
+                                <span class="text-sm text-gray-400 line-through">¥168</span>
+                            </div>
+                            <button class="w-full bg-brand-green hover:bg-green-600 text-white py-2 rounded-lg font-medium transition-all btn-press text-sm">加入购物车</button>
+                        </div>
+                    </div>
+
+                    <!-- 产品 2: 千倍除臭消毒液 -->
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.05s;">
+                        <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
+                            <img src="statics/images/good/千倍除臭消毒液.jpeg" alt="千倍除臭消毒液" class="w-full h-full object-cover" loading="lazy">
+                            <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium">推荐</div>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-brand-dark mb-1">千倍除臭消毒液</h4>
+                            <p class="text-gray-500 text-sm mb-3">高倍稀释一支抵十支，除味兼杀菌</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">高效杀菌</span>
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">温和无刺</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-lg font-bold text-brand-green">¥88</span>
+                                <span class="text-sm text-gray-400 line-through">¥118</span>
+                            </div>
+                            <button class="w-full bg-brand-green hover:bg-green-600 text-white py-2 rounded-lg font-medium transition-all btn-press text-sm">加入购物车</button>
+                        </div>
+                    </div>
+
+                    <!-- 产品 3: 多效皮肤抑菌喷剂 -->
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.1s;">
+                        <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
+                            <img src="statics/images/good/多效皮肤抑菌喷剂.jpg" alt="多效皮肤抑菌喷剂" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-brand-dark mb-1">多效皮肤抑菌喷剂</h4>
+                            <p class="text-gray-500 text-sm mb-3">舒缓痕痒 · 抑菌护理，支持皮肤自愈合</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">皮肤护理</span>
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">免洗配方</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-lg font-bold text-brand-green">¥68</span>
+                                <span class="text-sm text-gray-400 line-through">¥88</span>
+                            </div>
+                            <button class="w-full bg-brand-green hover:bg-green-600 text-white py-2 rounded-lg font-medium transition-all btn-press text-sm">加入购物车</button>
+                        </div>
+                    </div>
+
+                    <!-- 产品 4: 洱海苍兰除臭喷雾 -->
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.15s;">
+                        <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
+                            <img src="statics/images/good/洱海苍兰除臭喷雾.png" alt="洱海苍兰除臭喷雾" class="w-full h-full object-cover" loading="lazy">
+                            <div class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-medium">新品</div>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-brand-dark mb-1">洱海苍兰除臭喷雾</h4>
+                            <p class="text-gray-500 text-sm mb-3">优雅苍兰香调，分解异味不masking</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">香调升级</span>
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">长效清新</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-lg font-bold text-brand-green">¥58</span>
+                                <span class="text-sm text-gray-400 line-through">¥78</span>
+                            </div>
+                            <button class="w-full bg-brand-green hover:bg-green-600 text-white py-2 rounded-lg font-medium transition-all btn-press text-sm">加入购物车</button>
+                        </div>
+                    </div>
+
+                    <!-- 产品 5: 大西洋除臭喷雾 -->
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.2s;">
+                        <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
+                            <img src="statics/images/good/大西洋除臭喷雾.png" alt="大西洋除臭喷雾" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-brand-dark mb-1">大西洋除臭喷雾</h4>
+                            <p class="text-gray-500 text-sm mb-3">海洋清香 · 中性不刺鼻，适合日常宠居</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">海洋香调</span>
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">快速见效</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-lg font-bold text-brand-green">¥58</span>
+                                <span class="text-sm text-gray-400 line-through">¥78</span>
+                            </div>
+                            <button class="w-full bg-brand-green hover:bg-green-600 text-white py-2 rounded-lg font-medium transition-all btn-press text-sm">加入购物车</button>
+                        </div>
+                    </div>
+
+                    <!-- 产品 6: 宇宙星空除臭喷雾 -->
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.25s;">
+                        <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
+                            <img src="statics/images/good/宇宙星空除臭喷雾.png" alt="宇宙星空除臭喷雾" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-brand-dark mb-1">宇宙星空除臭喷雾</h4>
+                            <p class="text-gray-500 text-sm mb-3">星空限定包装 · 高效分解除味因子</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">限定包装</span>
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">安全无毒</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-lg font-bold text-brand-green">¥58</span>
+                                <span class="text-sm text-gray-400 line-through">¥78</span>
+                            </div>
+                            <button class="w-full bg-brand-green hover:bg-green-600 text-white py-2 rounded-lg font-medium transition-all btn-press text-sm">加入购物车</button>
+                        </div>
+                    </div>
+
+                    <!-- 产品 7: 植物精油驱虫喷雾 -->
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.3s;">
+                        <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
+                            <img src="statics/images/good/植物精油驱虫喷雾祛虫防护.png" alt="植物精油驱虫喷雾" class="w-full h-full object-cover" loading="lazy">
+                            <div class="absolute top-3 right-3 bg-brand-green text-white text-xs px-3 py-1 rounded-full font-medium">热销</div>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-brand-dark mb-1">植物精油驱虫喷雾</h4>
+                            <p class="text-gray-500 text-sm mb-3">天然精油配方，温和驱避蜱虫 · 跳蚤</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">植物精油</span>
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">户外防护</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-lg font-bold text-brand-green">¥78</span>
+                                <span class="text-sm text-gray-400 line-through">¥98</span>
+                            </div>
+                            <button class="w-full bg-brand-green hover:bg-green-600 text-white py-2 rounded-lg font-medium transition-all btn-press text-sm">加入购物车</button>
+                        </div>
+                    </div>
+
+                    <!-- 产品 8: 除螨抑菌喷雾 -->
+                    <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.35s;">
+                        <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
+                            <img src="statics/images/good/除螨抑菌喷雾.jpg" alt="除螨抑菌喷雾" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-brand-dark mb-1">除螨抑菌喷雾</h4>
+                            <p class="text-gray-500 text-sm mb-3">深层除螨 · 抑菌防复发，宠窝床品可用</p>
+                            <div class="flex flex-wrap gap-1.5 mb-4">
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">强效除螨</span>
+                                <span class="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full">温和配方</span>
+                            </div>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-lg font-bold text-brand-green">¥68</span>
+                                <span class="text-sm text-gray-400 line-through">¥88</span>
+                            </div>
+                            <button class="w-full bg-brand-green hover:bg-green-600 text-white py-2 rounded-lg font-medium transition-all btn-press text-sm">加入购物车</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 品牌故事 -->
+        <section id="story" class="section-pad bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-14 animate-on-scroll">
+                        <span class="eyebrow center">品牌故事</span>
+                        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-brand-dark mt-3 mb-4 tracking-tight">用爱守护每一个毛孩子</h2>
+                        <div class="title-accent"></div>
+                        <p class="text-gray-500 max-w-xl mx-auto mt-6">三年研发，只为让每一次护理都安心</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-on-scroll">
+                        <!-- 左侧：品牌理念 -->
+                        <div>
+                            <div class="mb-10">
+                                <h3 class="text-xl font-extrabold text-brand-dark mb-3 flex items-center gap-3"><span class="w-1.5 h-6 rounded-full grad-brand inline-block"></span>我们的初心</h3>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    宠研家诞生于对宠物健康护理的深刻理解与热爱。我们深知，每一位宠物主人都希望给予自己的毛孩子最好的呵护，而清洁护理是宠物健康的第一道防线。
+                                </p>
+                                <p class="text-gray-600 leading-relaxed">
+                                    因此，我们联合专业兽医与皮肤科专家，历时三年研发，打造出专为宠物肌肤设计的温和清洁护理系列，让每一次护理都成为宠物与主人之间的亲密时光。
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-xl font-extrabold text-brand-dark mb-5 flex items-center gap-3"><span class="w-1.5 h-6 rounded-full grad-brand inline-block"></span>我们的承诺</h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div class="flex items-start gap-3 bg-brand-cream/60 rounded-xl p-4 border border-gray-100 transition-all hover:border-brand-green/40 hover:shadow-soft">
+                                        <svg class="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        <span class="text-gray-700 text-sm leading-relaxed">100% 天然植物成分，无化学添加剂</span>
+                                    </div>
+                                    <div class="flex items-start gap-3 bg-brand-cream/60 rounded-xl p-4 border border-gray-100 transition-all hover:border-brand-green/40 hover:shadow-soft">
+                                        <svg class="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        <span class="text-gray-700 text-sm leading-relaxed">专业兽医团队研发，临床验证安全有效</span>
+                                    </div>
+                                    <div class="flex items-start gap-3 bg-brand-cream/60 rounded-xl p-4 border border-gray-100 transition-all hover:border-brand-green/40 hover:shadow-soft">
+                                        <svg class="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        <span class="text-gray-700 text-sm leading-relaxed">适合所有宠物肌肤类型，含敏感肌</span>
+                                    </div>
+                                    <div class="flex items-start gap-3 bg-brand-cream/60 rounded-xl p-4 border border-gray-100 transition-all hover:border-brand-green/40 hover:shadow-soft">
+                                        <svg class="w-5 h-5 text-brand-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        <span class="text-gray-700 text-sm leading-relaxed">环保包装，践行可持续发展理念</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 右侧：品牌数据 -->
+                        <div class="relative grad-brand rounded-3xl p-8 text-white shadow-[var(--shadow-brand)] overflow-hidden">
+                            <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/10 blur-2xl"></div>
+                            <div class="absolute -bottom-12 -left-8 w-44 h-44 rounded-full bg-white/10 blur-2xl"></div>
+                            <h3 class="relative text-xl font-extrabold mb-8 text-center tracking-wide">品牌实力</h3>
+                            <div class="relative grid grid-cols-2 gap-4">
+                                <div class="glass rounded-2xl p-5 text-center">
+                                    <div class="text-3xl font-extrabold grad-brand bg-clip-text text-transparent mb-1">3+</div>
+                                    <p class="text-gray-600 text-sm">年研发历程</p>
+                                </div>
+                                <div class="glass rounded-2xl p-5 text-center">
+                                    <div class="text-3xl font-extrabold grad-brand bg-clip-text text-transparent mb-1">50+</div>
+                                    <p class="text-gray-600 text-sm">专业研发团队</p>
+                                </div>
+                                <div class="glass rounded-2xl p-5 text-center">
+                                    <div class="text-3xl font-extrabold grad-brand bg-clip-text text-transparent mb-1">100%</div>
+                                    <p class="text-gray-600 text-sm">天然植物成分</p>
+                                </div>
+                                <div class="glass rounded-2xl p-5 text-center">
+                                    <div class="text-3xl font-extrabold grad-brand bg-clip-text text-transparent mb-1">10万+</div>
+                                    <p class="text-gray-600 text-sm">满意用户</p>
+                                </div>
+                            </div>
+                            <div class="relative mt-8 pt-6 border-t border-white/25 text-center">
+                                <p class="text-white/95 italic">"让每一次护理，都成为爱的表达"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 购买渠道 -->
+        <section id="purchase" class="section-pad bg-gradient-to-br from-brand-cream/60 via-white to-green-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 animate-on-scroll">
+                    <span class="eyebrow center">购买渠道</span>
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-brand-dark mt-3 mb-4 tracking-tight">官方正品保障</h2>
+                    <div class="title-accent"></div>
+                    <p class="text-gray-500 max-w-xl mx-auto mt-6">认准天猫官方旗舰店，正品保障，安心购买</p>
+                </div>
+
+                <!-- 天猫旗舰店宽幅横幅 -->
+                <div class="max-w-4xl mx-auto animate-on-scroll">
+                    <div class="relative grad-brand rounded-3xl overflow-hidden shadow-[var(--shadow-brand)] p-8 md:p-12 text-white">
+                        <div class="absolute -top-12 -right-12 w-52 h-52 rounded-full bg-white/10 blur-2xl"></div>
+                        <div class="absolute -bottom-16 -left-10 w-56 h-56 rounded-full bg-white/10 blur-2xl"></div>
+                        <div class="relative flex flex-col md:flex-row items-center gap-8">
+                            <div class="w-20 h-20 shrink-0 rounded-2xl glass flex items-center justify-center text-4xl">🛒</div>
+                            <div class="flex-1 text-center md:text-left">
+                                <div class="inline-flex items-center text-xs font-bold bg-white/20 px-3 py-1 rounded-full mb-3">官方唯一授权</div>
+                                <h3 class="text-2xl md:text-3xl font-extrabold mb-2">天猫旗舰店 · 宠研家</h3>
+                                <p class="text-white/90 leading-relaxed max-w-md">统一价格 · 售后无忧 · 品牌直营仓发出，支持 7 天无理由退换。</p>
+                            </div>
+                            <div class="shrink-0">
+                                <a href="https://chongyanjia.tmall.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white text-brand-dark font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:scale-[1.03] btn-press">
+                                    立即购买
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 底部保障 -->
+                <div class="mt-10 flex flex-wrap justify-center gap-4 text-center animate-on-scroll">
+                    <div class="flex items-center gap-2 bg-white px-5 py-2.5 rounded-full shadow-soft border border-gray-100">
+                        <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700 text-sm font-medium">官方授权 正品保障</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white px-5 py-2.5 rounded-full shadow-soft border border-gray-100">
+                        <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700 text-sm font-medium">7天无理由退换</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white px-5 py-2.5 rounded-full shadow-soft border border-gray-100">
+                        <svg class="w-4 h-4 text-brand-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span class="text-gray-700 text-sm font-medium">全网统一价格</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 用户评价 -->
+        <section id="testimonials" class="section-pad bg-brand-cream/40 dot-grid">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-14 animate-on-scroll">
+                    <span class="eyebrow center">用户评价</span>
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-brand-dark mt-3 mb-4 tracking-tight">听听铲屎官们怎么说</h2>
+                    <div class="title-accent"></div>
+                    <p class="text-gray-500 max-w-xl mx-auto mt-6">来自真实用户的口碑反馈，是我们前进的最大动力</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- 评价卡片 1 -->
+                    <div class="bg-white rounded-2xl p-6 feature-card animate-on-scroll shadow-soft border border-gray-100 relative overflow-hidden">
+                        <div class="absolute top-4 right-5 text-6xl font-extrabold text-brand-green/5 leading-none pointer-events-none">”</div>
+                        <div class="text-brand-orange text-lg mb-3 tracking-widest">★★★★★</div>
+                        <p class="text-gray-600 leading-relaxed mb-5 italic">"家里三只猫，之前用的除臭喷雾味道刺鼻，换了宠研家之后完全不一样！淡淡的自然清香，猫咪也不排斥了，除臭效果真的很持久。"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-xl">🐱</div>
+                            <div>
+                                <div class="font-semibold text-brand-dark">小橘子妈妈</div>
+                                <div class="text-sm text-gray-500">三只猫咪的铲屎官</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 评价卡片 2 -->
+                    <div class="bg-white rounded-2xl p-6 feature-card animate-on-scroll shadow-soft border border-gray-100" style="transition-delay: 0.1s;">
+                        <div class="text-brand-orange text-lg mb-3 tracking-widest">★★★★★</div>
+                        <p class="text-gray-600 leading-relaxed mb-5 italic">"金毛洗澡是个大工程，宠研家沐浴露泡沫细腻好冲洗，洗完毛特别顺滑有光泽，第二天也没有皮屑了，真心推荐给大型犬家长！"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-xl">🐕</div>
+                            <div>
+                                <div class="font-semibold text-brand-dark">大毛爸爸</div>
+                                <div class="text-sm text-gray-500">金毛犬主人</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 评价卡片 3 -->
+                    <div class="bg-white rounded-2xl p-6 feature-card animate-on-scroll shadow-soft border border-gray-100" style="transition-delay: 0.2s;">
+                        <div class="text-brand-orange text-lg mb-3 tracking-widest">★★★★★</div>
+                        <p class="text-gray-600 leading-relaxed mb-5 italic">"护足霜真的是刚需！我家柯基冬天脚垫干裂严重，涂了一周就有明显改善，现在每天遛完狗都会涂一下，肉垫软软的超可爱～"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-xl">🐾</div>
+                            <div>
+                                <div class="font-semibold text-brand-dark">短腿星人</div>
+                                <div class="text-sm text-gray-500">柯基犬主人</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 评价卡片 4 -->
+                    <div class="bg-white rounded-2xl p-6 feature-card animate-on-scroll shadow-soft border border-gray-100" style="transition-delay: 0.3s;">
+                        <div class="text-brand-orange text-lg mb-3 tracking-widest">★★★★★</div>
+                        <p class="text-gray-600 leading-relaxed mb-5 italic">"湿纸巾真的太方便了！每次遛完狗擦脚擦身体，一抽一张很厚实，水分足又不粘腻，比之前用过的牌子好太多了，无限回购！"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-xl">🐶</div>
+                            <div>
+                                <div class="font-semibold text-brand-dark">柴柴控</div>
+                                <div class="text-sm text-gray-500">柴犬主人</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 评价卡片 5 -->
+                    <div class="bg-white rounded-2xl p-6 feature-card animate-on-scroll shadow-soft border border-gray-100" style="transition-delay: 0.4s;">
+                        <div class="text-brand-orange text-lg mb-3 tracking-widest">★★★★★</div>
+                        <p class="text-gray-600 leading-relaxed mb-5 italic">"家里猫主子对气味特别敏感，试了好多牌子都打喷嚏，宠研家除臭喷雾居然完全不排斥！植物成分闻着也安心，终于找到本命了。"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-xl">😺</div>
+                            <div>
+                                <div class="font-semibold text-brand-dark">布偶妈妈</div>
+                                <div class="text-sm text-gray-500">布偶猫主人</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 评价卡片 6 -->
+                    <div class="bg-white rounded-2xl p-6 feature-card animate-on-scroll shadow-soft border border-gray-100" style="transition-delay: 0.5s;">
+                        <div class="text-brand-orange text-lg mb-3 tracking-widest">★★★★★</div>
+                        <p class="text-gray-600 leading-relaxed mb-5 italic">"作为宠物美容师，用过很多专业产品，宠研家的沐浴露性价比真的高，起泡快、易冲洗、不伤手，客户都说洗完毛色亮了一个度！"</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-xl">✂️</div>
+                            <div>
+                                <div class="font-semibold text-brand-dark">宠物造型师小林</div>
+                                <div class="text-sm text-gray-500">专业宠物美容师</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 线下体验店 -->
+        <section id="stores" class="section-pad bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-14 animate-on-scroll">
+                    <span class="eyebrow center">线下体验店</span>
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-brand-dark mt-3 mb-4 tracking-tight">看得见、摸得着的安心</h2>
+                    <div class="title-accent"></div>
+                    <p class="text-gray-500 max-w-xl mx-auto mt-6">欢迎到店体验全系产品，专业顾问一对一为爱宠定制清洁方案</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 animate-on-scroll">
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all aspect-[3/4]">
+                        <img src="statics/images/线下门店/微信图片_20260915214956_151_576.jpg" alt="宠研家线下体验店 空间环境" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5">
+                            <div class="text-white text-lg font-bold">门店环境</div>
+                            <div class="text-white/80 text-sm">现代简约 · 宠物友好空间</div>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all aspect-[3/4]">
+                        <img src="statics/images/线下门店/微信图片_20260915214958_153_576.jpg" alt="宠研家线下体验店 产品陈列" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5">
+                            <div class="text-white text-lg font-bold">产品陈列</div>
+                            <div class="text-white/80 text-sm">全系产品开箱试用</div>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all aspect-[3/4]">
+                        <img src="statics/images/线下门店/微信图片_20260915214959_154_576.jpg" alt="宠研家线下体验店 专业顾问" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5">
+                            <div class="text-white text-lg font-bold">顾问服务</div>
+                            <div class="text-white/80 text-sm">一对一清洁方案定制</div>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all aspect-[3/4]">
+                        <img src="statics/images/线下门店/微信图片_20260915215005_160_576.jpg" alt="宠研家线下体验店 互动区" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5">
+                            <div class="text-white text-lg font-bold">互动体验</div>
+                            <div class="text-white/80 text-sm">毛孩子现场亲密接触</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 text-center animate-on-scroll">
+                    <p class="text-gray-500 mb-4">📍 具体门店地址与营业时间，请关注官方公众号或联系天猫旗舰店在线客服获取</p>
+                    <a href="#purchase" class="btn-brand inline-flex items-center gap-2 text-white px-9 py-3.5 rounded-full font-bold transition-all">
+                        咨询门店详情
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-brand-dark text-white pt-16 pb-8" role="contentinfo">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- 品牌简介 -->
+                <div>
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <img src="statics/images/logo.jpg" alt="宠研の家 logo" class="w-11 h-11 rounded-lg object-cover ring-1 ring-white/25">
+                        <span class="text-xl font-bold">宠研之家</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        科学守护宠物健康<br>
+                        旗下两大品牌：保健品与清洁用品
+                    </p>
+                </div>
+
+                <!-- 旗下品牌 -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">旗下品牌</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-brand-green transition-colors">宠研之家</a></li>
+                        <li><a href="petlabmaster.html" class="hover:text-brand-green transition-colors">PetLabMaster</a></li>
+                        <li><a href="cyj.html" class="hover:text-brand-green transition-colors">宠研家 清洁用品</a></li>
+                    </ul>
+                </div>
+
+                <!-- 产品系列 -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">产品系列</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#products" class="hover:text-brand-green transition-colors">消毒灭菌</a></li>
+                        <li><a href="#products" class="hover:text-brand-green transition-colors">皮肤抑菌</a></li>
+                        <li><a href="#products" class="hover:text-brand-green transition-colors">环境除臭</a></li>
+                        <li><a href="#products" class="hover:text-brand-green transition-colors">驱虫除螨</a></li>
+                    </ul>
+                </div>
+
+                <!-- 客户服务 -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">客户服务</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#purchase" class="hover:text-brand-green transition-colors">购买渠道</a></li>
+                        <li><a href="#stores" class="hover:text-brand-green transition-colors">线下门店</a></li>
+                        <li><a href="#" class="hover:text-brand-green transition-colors">配送说明</a></li>
+                        <li><a href="#" class="hover:text-brand-green transition-colors">退换政策</a></li>
+                        <li><a href="#" class="hover:text-brand-green transition-colors">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2025 宠研之家. All rights reserved.
+                </p>
+                <div class="flex items-center gap-6 text-gray-400 text-sm">
+                    <a href="#features" class="hover:text-brand-blue transition-colors">核心优势</a>
+                    <a href="#ingredients" class="hover:text-brand-blue transition-colors">天然成分</a>
+                    <a href="#testimonials" class="hover:text-brand-blue transition-colors">用户评价</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
