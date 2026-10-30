@@ -246,22 +246,22 @@
         <h1 class="sr-only">宠研の家  - 专业宠物清洁护理用品品牌，温和配方，安全有效</h1>
 
         <!-- 首屏 Banner（单图） -->
-        <section class="relative min-h-screen overflow-hidden pt-16" aria-label="首页展示">
-            <div class="banner-slide active relative w-full min-h-screen">
+        <section class="relative w-full overflow-hidden pt-16" aria-label="首页展示">
+            <div class="banner-slide active relative w-full aspect-[2/1] min-h-[240px] max-h-[60vh]">
                 <div class="absolute inset-0 overflow-hidden">
-                    <img src="statics/images/cyj_banner1.jpg" alt="宠研家清洁护理产品 天然植萃配方" class="banner-img" loading="eager">
+                    <img src="statics/images/banner.jpg" alt="宠研家清洁护理产品 天然植萃配方" class="banner-img" loading="eager">
                 </div>
             </div>
 
             <!-- 向下滚动提示 -->
-            <a href="#features" id="scrollHint" class="hidden md:flex absolute bottom-16 left-1/2 -translate-x-1/2 z-30 flex-col items-center gap-1 text-white/85 hover:text-white transition-colors duration-500">
+            <a href="#ingredients" id="scrollHint" class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex-col items-center gap-1 text-white/85 hover:text-white transition-colors duration-500">
                 <span class="text-[10px] tracking-[0.4em] uppercase">Scroll</span>
                 <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7-7-7"/></svg>
             </a>
 
             <!-- 底部波浪装饰 -->
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
-                <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <svg class="w-full h-10 md:h-14" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                     <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
                 </svg>
             </div>
@@ -275,13 +275,14 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                object-position: center 25%;
                 transform-origin: center;
                 will-change: transform;
                 animation: ken-burns 18s ease-out infinite alternate;
             }
             @keyframes ken-burns {
                 0%   { transform: scale(1.02); }
-                100% { transform: scale(1.14); }
+                100% { transform: scale(1.08); }
             }
         </style>
 
@@ -440,7 +441,7 @@
 
                 <!-- 场景应用横幅 -->
                 <div class="relative rounded-3xl overflow-hidden mb-10 shadow-soft animate-on-scroll aspect-[21/9] bg-gray-100">
-                    <img src="statics/images/good/千倍消毒液_家居场景应用.png" alt="千倍除臭消毒液 家居场景应用" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                    <img src="statics/images/good/千倍消毒液_家居场景应用.jpg" alt="千倍除臭消毒液 家居场景应用" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent"></div>
                     <div class="absolute inset-y-0 left-0 flex flex-col justify-center p-6 md:p-10 text-white max-w-lg">
                         <span class="text-xs uppercase tracking-widest text-brand-green mb-2 font-bold">场景应用</span>
@@ -475,7 +476,7 @@
                     <!-- 产品 2: 千倍除臭消毒液 -->
                     <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.05s;">
                         <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
-                            <img src="statics/images/good/千倍除臭消毒液.jpeg" alt="千倍除臭消毒液" class="w-full h-full object-cover" loading="lazy">
+                            <img src="statics/images/good/千倍除臭消毒液.jpg" alt="千倍除臭消毒液" class="w-full h-full object-cover" loading="lazy">
                             <div class="absolute top-3 right-3 bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-medium">推荐</div>
                         </div>
                         <div class="p-5">
@@ -516,7 +517,7 @@
                     <!-- 产品 4: 洱海苍兰除臭喷雾 -->
                     <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.15s;">
                         <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
-                            <img src="statics/images/good/洱海苍兰除臭喷雾.png" alt="洱海苍兰除臭喷雾" class="w-full h-full object-cover" loading="lazy">
+                            <img src="statics/images/good/洱海苍兰除臭喷雾.jpg" alt="洱海苍兰除臭喷雾" class="w-full h-full object-cover" loading="lazy">
                             <div class="absolute top-3 right-3 bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-medium">新品</div>
                         </div>
                         <div class="p-5">
@@ -537,7 +538,7 @@
                     <!-- 产品 5: 大西洋除臭喷雾 -->
                     <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.2s;">
                         <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
-                            <img src="statics/images/good/大西洋除臭喷雾.png" alt="大西洋除臭喷雾" class="w-full h-full object-cover" loading="lazy">
+                            <img src="statics/images/good/大西洋除臭喷雾.jpg" alt="大西洋除臭喷雾" class="w-full h-full object-cover" loading="lazy">
                         </div>
                         <div class="p-5">
                             <h4 class="font-bold text-brand-dark mb-1">大西洋除臭喷雾</h4>
@@ -557,7 +558,7 @@
                     <!-- 产品 6: 宇宙星空除臭喷雾 -->
                     <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.25s;">
                         <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
-                            <img src="statics/images/good/宇宙星空除臭喷雾.png" alt="宇宙星空除臭喷雾" class="w-full h-full object-cover" loading="lazy">
+                            <img src="statics/images/good/宇宙星空除臭喷雾.jpg" alt="宇宙星空除臭喷雾" class="w-full h-full object-cover" loading="lazy">
                         </div>
                         <div class="p-5">
                             <h4 class="font-bold text-brand-dark mb-1">宇宙星空除臭喷雾</h4>
@@ -577,7 +578,7 @@
                     <!-- 产品 7: 植物精油驱虫喷雾 -->
                     <div class="bg-white rounded-2xl overflow-hidden card-hover animate-on-scroll shadow-sm border border-gray-100" style="transition-delay: 0.3s;">
                         <div class="h-44 product-media relative overflow-hidden rounded-t-xl bg-gray-50">
-                            <img src="statics/images/good/植物精油驱虫喷雾祛虫防护.png" alt="植物精油驱虫喷雾" class="w-full h-full object-cover" loading="lazy">
+                            <img src="statics/images/good/植物精油驱虫喷雾祛虫防护.jpg" alt="植物精油驱虫喷雾" class="w-full h-full object-cover" loading="lazy">
                             <div class="absolute top-3 right-3 bg-brand-green text-white text-xs px-3 py-1 rounded-full font-medium">热销</div>
                         </div>
                         <div class="p-5">
